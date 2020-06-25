@@ -7,7 +7,7 @@ ENV NUXT_PORT=3000
 
 # update and install dependency
 RUN apk --no-cache add python make g++ curl
-RUN npm i -g pm2 && npm cache clean --force
+RUN npm i -g pm2 npm-run-all && npm cache clean --force
 
 # create destination directory
 RUN mkdir -p /app
